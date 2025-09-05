@@ -14,7 +14,7 @@ Why? Axiom does not require the commercial license on localhost ips.
 - Windows OS (for the provided executable)
 
 ## Installation & Usage
-1. **Download** `proxy.exe` from the [Releases](https://github.com/CoreByte/AxiomProxy/releases) page.
+1. **Download** `proxy.exe` from the [Releases](https://github.com/CoreBytee/AxiomProxy/releases) page.
 2. **Download** `.env.example` from the repository and rename it to `.env`.
 3. **Move** both `proxy.exe` and `.env` into your Minecraft game folder (the same folder as your instance).
 4. **Open** Prism Launcher and go to your instance settings.
@@ -30,6 +30,6 @@ Why? Axiom does not require the commercial license on localhost ips.
 Edit the `.env` file to customize proxy settings as needed. Refer to comments in the `.env.example` for available options.
 
 ## Support
-For issues or questions, please open an issue on the [GitHub repository](https://github.com/CoreByte/AxiomProxy/issues).
+For issues or questions, please open an issue on the [GitHub repository](https://github.com/CoreBytee/AxiomProxy/issues).
 
 ---
