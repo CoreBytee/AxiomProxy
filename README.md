@@ -20,7 +20,7 @@ Why? Axiom does not require the commercial license on localhost ips.
 4. **Open** Prism Launcher and go to your instance settings.
 5. **Set** the wrapper command to:
    ```sh
-   $INST_MC_DIR/proxy.exe
+   $INST_MC_DIR/axiom-proxy.exe
    ```
 6. **Change** the server IP in your Minecraft client to `localhost`.
 7. **Start** the game from Prism Launcher. The proxy will launch automatically.
