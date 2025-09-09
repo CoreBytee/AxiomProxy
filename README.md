@@ -26,6 +26,9 @@ Why? Axiom does not require the commercial license on localhost ips.
 7. **Start** the game from Prism Launcher. The proxy will launch automatically.
 8. **Profit!**
 
+## Troubleshooting
+If you get an error when joining the proxied localhost server, retry until the stars align...
+
 ## Configuration
 Edit the `.env` file to customize proxy settings as needed. Refer to comments in the `.env.example` for available options.
 
