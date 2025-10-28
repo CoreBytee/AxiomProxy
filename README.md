@@ -35,11 +35,7 @@ Edit the `.env` file to customize proxy settings as needed. Refer to comments in
 ## Support
 For issues or questions, please open an issue on the [GitHub repository](https://github.com/CoreBytee/AxiomProxy/issues).
 
-<<<<<<< HEAD
 ## References
 This other project might also be of use: https://github.com/dwinkley2/AxiomUnlocker
 
 ---
-=======
----
->>>>>>> 21e31d6ffc9e57a34415201cc6727ece4b4d774b
