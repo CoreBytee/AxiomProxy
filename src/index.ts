@@ -17,27 +17,32 @@ Bun.listen({
         open: async (socket: Bun.Socket<Promise<Bun.Socket>>) => {
             console.log("new connection");
 
-            const connection = Bun.connect({
-                hostname: targetHost,
-                port: Number.parseInt(targetPort),
-                socket: {
-                    open: (targetSocket) => {
-                        console.log("connected to target");
-                    },
-                    data: (targetSocket, data) => {
-                        socket.write(data);
-                    },
-                    close: (targetSocket) => {
-                        console.log("target closed connection");
-                        socket.end();
-                    },
-                    error: (targetSocket, error) => {
-                        console.error("Target socket error:", error);
+            try {
+                const connection = Bun.connect({
+                    hostname: targetHost,
+                    port: Number.parseInt(targetPort),
+                    socket: {
+                        open: (targetSocket) => {
+                            console.log("connected to target");
+                        },
+                        data: (targetSocket, data) => {
+                            socket.write(data);
+                        },
+                        close: (targetSocket) => {
+                            console.log("target closed connection");
+                            socket.end();
+                        },
+                        error: (targetSocket, error) => {
+                            console.error("Target socket error:", error);
+                        }
                     }
-                }
-            })
+                })
 
-            socket.data = connection
+                socket.data = connection
+            } catch (error) {
+                socket.close()
+            }
+
         },
         data: async (socket, data) => {
             const target = await socket.data;
@@ -54,8 +59,6 @@ Bun.listen({
         }
     }
 })
-
-console.log(argv.slice(2))
 
 Bun.spawn({
     cmd: argv.slice(2),
